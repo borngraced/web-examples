@@ -15,7 +15,7 @@ export default function PairingsPage() {
   }
 
   async function onPing(topic: string) {
-    await web3wallet.core.pairing.pair({ topic })
+    await walletkit.core.pairing.pair({ topic })
   }
 
   console.log(pairings)

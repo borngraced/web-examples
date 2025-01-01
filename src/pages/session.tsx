@@ -66,7 +66,7 @@ export default function SessionPage() {
   const onSessionPing = useCallback(async () => {
     setPingLoading(true)
     console.log('pinging!')
-    await web3wallet.engine.signClient.ping({ topic })
+    await walletkit.engine.signClient.ping({ topic })
     console.log('pinged')
     setPingLoading(false)
   }, [topic])
