@@ -44,7 +44,7 @@ export default function useWalletConnectEventsManager(initialized: boolean) {
       const { topic, params, verifyContext, id } = requestEvent
       const { request } = params
       console.log('before get topic')
-      const requestSession = web3wallet.engine.signClient.session.get(topic)
+      const requestSession = walletkit.engine.signClient.session.get(topic)
       // set the verify context so it can be displayed in the projectInfoCard
       console.log('before veryify context')
       SettingsStore.setCurrentRequestVerifyContext(verifyContext)
